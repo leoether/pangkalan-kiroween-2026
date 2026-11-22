@@ -1,0 +1,21 @@
+# Pangkalan — Implementation Tasks
+
+- [ ] 1. Scaffold Vite + React + TypeScript app at repo root
+  - _Requirements: 4.1, 4.3_
+- [ ] 2. Implement domain logic in `src/lib/pangkalan.ts` (pure functions)
+  - fare calculation (Rp 2.600/km), queue rotation helpers, daily summary
+  - _Requirements: 1.1–1.6, 2.1–2.4, 3.3_
+- [ ] 3. Implement queue UI (`QueueSection`): add driver, positions, next turn, start trip, remove driver
+  - _Requirements: 1.1–1.6_
+- [ ] 4. Implement fare calculator UI (`FareCalculator`): distance input, fare output, example routes
+  - _Requirements: 2.1–2.4_
+- [ ] 5. Implement trip log UI (`TripLog`): finish-trip form, trip list, daily summary, delete trip
+  - _Requirements: 3.1–3.4_
+- [ ] 6. Wire persistence: load/save `pangkalan-state-v1` in localStorage in `App.tsx`
+  - _Requirements: 3.2_
+- [ ] 7. Mobile-first styling in `index.css` / `App.css` (single column, large tap targets)
+  - _Requirements: 4.1, 4.2_
+- [ ] 8. Set Vite `base` to `/pangkalan-kiroween-2026/` for GitHub Pages
+  - _Requirements: 4.3_
+- [ ] 9. Verify `npm run build` passes and smoke-test the built output
+  - _Requirements: 1–4_
