@@ -1,0 +1,1 @@
+{"hooks":[{"command":"npm run build","description":"After source files change, run the production build to catch type errors early.","name":"verify-build-after-edit","patterns":["src/**/*.ts","src/**/*.tsx"],"trigger":"onFileChange"}],"version":"1.0"}

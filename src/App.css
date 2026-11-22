@@ -1,0 +1,424 @@
+/* ===== App layout ===== */
+#app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 0 2rem;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+.app-header {
+  background: var(--brand);
+  color: #fff;
+  padding: 1.25rem 1rem .75rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  font-size: 1.75rem;
+  color: #fff;
+  margin: 0 0 .25rem;
+}
+
+.app-tagline {
+  font-size: .875rem;
+  opacity: .9;
+  margin: 0;
+}
+
+/* ===== Main content ===== */
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* ===== Card ===== */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1rem;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  margin-bottom: .75rem;
+  color: var(--text);
+}
+
+.card-desc {
+  font-size: .875rem;
+  color: var(--text-muted);
+  margin-bottom: .75rem;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  padding: .625rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  min-height: 44px;
+  transition: background .15s, opacity .15s;
+}
+
+.btn:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+}
+.btn-primary:not(:disabled):hover {
+  background: var(--brand-dark);
+}
+
+.btn-secondary {
+  background: var(--brand-light);
+  color: var(--brand-dark);
+}
+.btn-secondary:not(:disabled):hover {
+  background: var(--border);
+}
+
+.btn-danger-sm {
+  background: none;
+  border: none;
+  color: var(--danger);
+  padding: .375rem .5rem;
+  min-height: 36px;
+  font-size: .875rem;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.btn-danger-sm:hover {
+  background: var(--danger-light);
+}
+
+/* ===== Text inputs ===== */
+.text-input {
+  flex: 1;
+  padding: .625rem .75rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--surface);
+  min-height: 44px;
+  outline: none;
+  transition: border-color .15s;
+  width: 100%;
+}
+.text-input:focus {
+  border-color: var(--brand);
+}
+.text-input.input-error {
+  border-color: var(--danger);
+}
+
+.error-msg {
+  color: var(--danger);
+  font-size: .875rem;
+  margin-top: .25rem;
+}
+
+/* ===== Add driver row ===== */
+.add-row {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: .75rem;
+}
+
+/* ===== Next turn banner ===== */
+.next-banner {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  background: var(--brand-light);
+  border-radius: 8px;
+  padding: .75rem 1rem;
+  margin-bottom: .75rem;
+  flex-wrap: wrap;
+}
+
+.next-label {
+  font-size: .8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--brand);
+  flex: 0 0 auto;
+}
+
+.next-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  flex: 1 1 auto;
+}
+
+/* ===== Driver list ===== */
+.driver-list {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  margin-top: .25rem;
+}
+
+.driver-item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .5rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+.driver-pos {
+  font-size: .875rem;
+  font-weight: 700;
+  color: var(--brand);
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.driver-name {
+  flex: 1;
+  font-size: .95rem;
+}
+
+/* ===== Fare calculator ===== */
+.fare-row {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-bottom: .5rem;
+}
+
+.unit-label {
+  font-size: .95rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.fare-result {
+  text-align: center;
+  margin: .75rem 0;
+}
+
+.fare-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--success);
+}
+
+.example-routes {
+  margin-top: .75rem;
+}
+
+.example-title {
+  font-size: .875rem;
+  color: var(--text-muted);
+  margin-bottom: .375rem;
+}
+
+.route-list {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+}
+
+.route-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: .5rem;
+  padding: .5rem .75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-align: left;
+  color: var(--text);
+  transition: border-color .15s;
+  min-height: 44px;
+}
+.route-btn:hover {
+  border-color: var(--brand);
+}
+
+.route-label {
+  flex: 1;
+  font-size: .9rem;
+}
+
+.route-dist {
+  font-size: .85rem;
+  color: var(--text-muted);
+}
+
+.route-fare {
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--success);
+}
+
+/* ===== Trip log ===== */
+.summary-box {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background: var(--success-bg);
+}
+
+.summary-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .75rem .5rem;
+}
+
+.summary-label {
+  font-size: .8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: .25rem;
+}
+
+.summary-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--success);
+}
+
+.summary-divider {
+  width: 1px;
+  background: var(--border);
+}
+
+/* ===== Finish trip form ===== */
+.finish-form {
+  border: 1.5px solid var(--brand);
+  border-radius: 8px;
+  padding: .875rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  background: var(--brand-light);
+}
+
+.finish-driver {
+  font-size: .9rem;
+  margin: 0;
+}
+
+.fare-preview {
+  font-size: .95rem;
+  margin: 0;
+}
+
+.quick-routes {
+  display: flex;
+  gap: .375rem;
+  flex-wrap: wrap;
+}
+
+.route-btn-sm {
+  font-size: .8rem;
+  padding: .3rem .6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  min-height: 36px;
+  transition: border-color .15s;
+}
+.route-btn-sm:hover {
+  border-color: var(--brand);
+}
+
+/* ===== Trip list ===== */
+.trip-list {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+}
+
+.trip-item {
+  display: flex;
+  align-items: flex-start;
+  gap: .5rem;
+  padding: .625rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+.trip-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+}
+
+.trip-driver {
+  font-size: .95rem;
+  font-weight: 700;
+}
+
+.trip-dest {
+  font-size: .9rem;
+  color: var(--text);
+}
+
+.trip-meta {
+  font-size: .8rem;
+  color: var(--text-muted);
+}
+
+/* ===== Empty states ===== */
+.empty-hint {
+  font-size: .9rem;
+  color: var(--text-muted);
+  text-align: center;
+  padding: .5rem 0;
+  margin: 0 0 .75rem;
+}
+
+.trip-empty {
+  margin: .5rem 0 0;
+}
+
+/* ===== Footer ===== */
+.app-footer {
+  text-align: center;
+  padding: .75rem 1rem;
+  font-size: .8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  margin-top: .5rem;
+}
+
+.app-footer p {
+  margin: 0;
+}
